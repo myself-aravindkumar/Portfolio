@@ -1,0 +1,34 @@
+﻿<style>
+.navbar {
+display: flex;
+align-items: center;
+}
+
+.navbar a::after {
+content: "";
+position: absolute;
+width: 0%;
+height: 3px;
+left: 0;
+background-color: teal;
+transition: all 0.3s ease;
+bottom: 0;
+}
+
+.navbar a:hover::after {
+width: 100%;
+}
+</style>
+<HeadContent>
+    <PageTitle>Aravind | Portfolio</PageTitle>
+    <MudElement HtmlTag="link" rel="icon" typeof="image/x-icon" src="~/assets/a.png"></MudElement>
+</HeadContent>
+<MudAppBar Style="background-color:transparent" Fixed="false">
+    <MudButton Typo="Typo.h6" DisableElevation="true" Style="font-size:32px;color:teal;font-family:fantasy;box-shadow:none" OnClick="@(()=>navigationManager.NavigateTo("/"))">Aravind</MudButton>
+    <MudSpacer />
+    <MudPaper Style="background-color:transparent;margin-right:10%" Class="d-flex justify-start flex-wrap gap-10 navbar" Elevation="0">
+        <MudLink Style="color:black!important;position:relative;" Href="/" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.Home" Title="Home" />Home</MudLink>
+        <MudLink Style="color:black!important;position:relative;" Href="about" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.PersonOutline" Title="About" />About</MudLink>
+        <MudLink Style="color:black!important;position:relative;" Href="resume" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.InsertDriveFile" Title="Reaume" />Resume</MudLink>
+    </MudPaper>
+</MudAppBar>
