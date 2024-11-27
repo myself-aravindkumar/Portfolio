@@ -4,13 +4,18 @@ display: flex;
 align-items: center;
 }
 
+.navbar a {
+    position: relative;
+    padding-bottom: 5px; /* Add padding to create space between the text and the bottom line */
+}
+
 .navbar a::after {
 content: "";
 position: absolute;
 width: 0%;
 height: 3px;
 left: 0;
-background-color: teal;
+background-color: #C0C0C0;
 transition: all 0.3s ease;
 bottom: 0;
 }
@@ -23,12 +28,12 @@ width: 100%;
     <PageTitle>Aravind | Portfolio</PageTitle>
     <MudElement HtmlTag="link" rel="icon" typeof="image/x-icon" src="~/assets/a.png"></MudElement>
 </HeadContent>
-<MudAppBar Style="background-color:transparent" Fixed="false">
-    <MudButton Typo="Typo.h6" DisableElevation="true" Style="font-size:32px;color:teal;font-family:fantasy;box-shadow:none" OnClick="@(()=>navigationManager.NavigateTo("/"))">Aravind</MudButton>
+<MudAppBar Style="background-color:teal" Fixed="true">
+    <MudButton Typo="Typo.h6" DisableElevation="true" Style="font-size:32px;color:white;font-family:fantasy;box-shadow:none" OnClick="@(()=>navigationManager.NavigateTo("/"))">Aravind</MudButton>
     <MudSpacer />
     <MudPaper Style="background-color:transparent;margin-right:10%" Class="d-flex justify-start flex-wrap gap-10 navbar" Elevation="0">
-        <MudLink Style="color:black!important;position:relative;" Href="/" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.Home" Title="Home" />Home</MudLink>
-        <MudLink Style="color:black!important;position:relative;" Href="about" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.PersonOutline" Title="About" />About</MudLink>
-        <MudLink Style="color:black!important;position:relative;" Href="resume" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.InsertDriveFile" Title="Reaume" />Resume</MudLink>
+        <MudLink Style="color:black!important;" Href="/" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.Home" Title="Home" />Home</MudLink>
+        <MudLink Style="color:black!important;" Href="about" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.PersonOutline" Title="About" />About</MudLink>
+        <MudLink Style="color:black!important;" Href="resume" Underline="Underline.None"><MudIcon Icon="@Icons.Material.TwoTone.InsertDriveFile" Title="Reaume" />Resume</MudLink>
     </MudPaper>
 </MudAppBar>

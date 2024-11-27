@@ -5,8 +5,10 @@ using MudBlazor.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMudServices();
+builder.Services.AddBootstrapBlazor();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+
 
 var app = builder.Build();
 
