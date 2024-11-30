@@ -1,0 +1,62 @@
+﻿<style>
+.navbar {
+    display: flex;
+    align-items: center;
+    font-family:math;
+}
+
+.navbar .nav-item .nav-link {
+    color: black; /* Set text color of li links to black */
+    position: relative;
+    font-size:20px;
+    padding-bottom: 5px; /* Add padding for hover effect */
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: Black;
+}
+
+.Line .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 10px;
+    background-color: #C0C0C0;
+    transition: all 0.3s ease;
+    bottom: 0;
+}
+
+.Line .nav-link:hover::after {
+    width: 84%; /* Expand underline on hover */
+}
+</style>
+
+    <title>Aravind | Portfolio</title>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:teal;height:68px;">
+    <div class="container">
+        <a class="navbar-brand" style="color:white;font-weight:bolder;font-size:30px;" href="/">ARAVIND</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse Line" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="bi bi-house-door-fill" title="Home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about">
+                        <i class="bi bi-person-fill" title="About"></i> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume">
+                        <i class="bi bi-file-earmark-fill" title="Resume"></i> Resume
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
