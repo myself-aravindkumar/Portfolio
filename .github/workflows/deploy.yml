@@ -1,27 +1,27 @@
-name: Build and Deploy Blazor WebAssembly
+name: Deploy Blazor WebAssembly to Vercel
 
 on:
   push:
     branches:
-      - main
+      - master # Specify the master branch
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up .NET
+    - name: Set up .NET 8
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '7.x' # Replace with your target .NET version
+        dotnet-version: '8.0' # Specify .NET 8
 
     - name: Build Blazor WebAssembly
       run: dotnet publish -c Release
 
     - name: Deploy to Vercel
       env:
-        VERCEL_TOKEN: ${{ secrets.FcsOJ0qBHbYtTosPx6UXDL0J }}
-      run: npx vercel deploy --prod --prebuilt --cwd=bin/Release/net7.0/wwwroot
+        VERCEL_TOKEN: ${{ secrets.kKPpjAQnMvV5rIAIr5gzJnK9 }}
+      run: npx vercel deploy --prod --prebuilt --cwd=bin/Release/net8.0/wwwroot
