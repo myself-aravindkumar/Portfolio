@@ -1,2 +1,78 @@
 ﻿@page "/"
 
+<div class="container">
+    <div class="row" style="display: flex; align-items: center; justify-content: center;">
+        <div class="col-7">
+            <div class="splash-container">
+                <div class="splash">
+                    <div class="splash_logo">
+                        Hello
+                    </div>
+                    <div class="splash_minimize">
+                        <svg width="100%" height="100%">
+                            <rect width="100%" height="100%" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="text">
+                    <p style="margin-left:inherit">Welcome to</p>
+                    <p>My <span style="color: teal;">Portfolio</span></p>
+                    <h1 style="white-space:nowrap;">I'M <span style="color: teal;font-weight: bold;">Aravindkumar</span></h1>
+                    <h3 style="margin-left:30px;">@typedText<span class="cursor">|</span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <img class="resume-image" style="margin-left:30px" src="/home-pic.png" alt="Image File" />
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+    private string typedText = "";
+    private List<string> roles = new List<string>
+    {
+        "Blazor Developer",
+        "Dot Net Developer",
+        "Full Stack Developer",
+        "Software Engineer",
+        "Software Developer"
+    };
+    private int currentRoleIndex = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(5000);
+        await TypeText();
+    }
+
+    private async Task TypeText()
+    {
+        while (true)
+        {
+            string role = roles[currentRoleIndex];
+            typedText = "";
+
+            for (int i = 0; i < role.Length; i++)
+            {
+                typedText += role[i];
+                StateHasChanged(); 
+                await Task.Delay(100);  
+            }
+
+            await Task.Delay(2000);
+
+            for (int i = role.Length; i > 0; i--)
+            {
+                typedText = typedText.Substring(0, i - 1);
+                StateHasChanged();
+                await Task.Delay(50); 
+            }
+
+            currentRoleIndex = (currentRoleIndex + 1) % roles.Count;
+        }
+    }
+}
+
