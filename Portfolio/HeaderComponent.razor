@@ -33,7 +33,7 @@
 
     /* Fork Button Styles */
     .navbar .fork-btn {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         border: 1px solid #e0e0e0;
         padding: 6px 12px;
@@ -66,6 +66,22 @@
             color: white;
         }
 
+    @@media (max-width: 991.98px) {
+        #navbarNav
+
+    {
+        position: sticky;
+        top: 68px;
+        right: 0;
+        width: 100%;
+        background-color: transparent;
+        z-index: 999;
+        padding: 1rem 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    }
+
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top z-depth-4" style="background-color:teal;height:68px;">
     <div class="container">
@@ -74,7 +90,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse Line" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto text-end">
                 <li class="nav-item">
                     <a class="nav-link" href="/">
                         <i class="bi bi-house-door-fill" title="Home"></i> Home
@@ -102,3 +118,12 @@
         </div>
     </div>
 </nav>
+<script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('navbarNav');
+        const collapse = bootstrap.Collapse.getInstance(nav);
+        if (collapse) collapse.hide();
+      });
+    });
+</script>
