@@ -4,7 +4,7 @@
     <div class="row" style="min-height:100vh;display: flex; align-items: center; justify-content: center;">
         <div class="col-7">
             <div class="splash-container">
-                <div class="splash">
+                @* <div class="splash">
                     <div class="splash_logo">
                         Hello
                     </div>
@@ -13,7 +13,7 @@
                             <rect width="100%" height="100%" />
                         </svg>
                     </div>
-                </div>
+                </div> *@
                 <div class="text">
                     <p style="margin-left:inherit">Welcome to</p>
                     <p>My <span style="color: teal;">Portfolio</span></p>
@@ -26,18 +26,36 @@
             <img class="resume-image" style="margin-left:30px" src="/home-pic.png" alt="Image File" />
         </div>
     </div>
-    <div class="row" style="margin-bottom:100px;display: flex; align-items: center; justify-content: center;">
-        <div class="col-8">
-            <h1>LET ME <span style="color: teal;font-weight:bold">INTRODUCE</span> MYSELF</h1>
-            <p>I’ve always been fascinated by programming, and with every project, I feel like I’m learning a little more each day.<span style="background:teal">🌟</span></p>
-            <p>I have hands-on experience with C#, HTML, CSS, and Blazor, and I enjoy exploring new technologies to improve my skills.</p>
-            <p>Driven by continuous improvement, I’m always looking for ways to grow as a developer and as a person.</p>
-            <p>When I’m not coding, I spend time exploring new tech trends, listening to insightful podcasts, and relaxing with a good movie.</p>
-        </div>
-        <div class="col-4">
-            <img class="resume-image" style="margin-left:30px" src="/me.png" alt="Image File" />
+    <div class="container mb-5">
+        <div class="row align-items-center justify-content-center">
+            <!-- Image Section: Comes first on mobile, second on desktop -->
+            <div class="col-12 col-md-4 text-center order-1 order-md-2 mb-4 mb-md-0">
+                <img class="resume-image img-fluid" src="/me.png" alt="Image File" style="max-width: 250px;" />
+            </div>
+
+            <!-- Text Section: Comes second on mobile, first on desktop -->
+            <div class="col-12 col-md-8 order-2 order-md-1">
+                <h1>
+                    LET ME <span style="color: teal; font-weight: bold;">INTRODUCE</span> MYSELF
+                </h1>
+                <p>
+                    I’ve always been fascinated by programming, and with every project, I feel like I’m learning a little more each day.
+                    <span style="background: teal; color: white; padding: 2px 6px; border-radius: 4px;">🌟</span>
+                </p>
+                <p>
+                    I have hands-on experience with C#, HTML, CSS, and Blazor, and I enjoy exploring new technologies to improve my skills.
+                </p>
+                <p>
+                    Driven by continuous improvement, I’m always looking for ways to grow as a developer and as a person.
+                </p>
+                <p>
+                    When I’m not coding, I spend time exploring new tech trends, listening to insightful podcasts, and relaxing with a good movie.
+                </p>
+            </div>
         </div>
     </div>
+
+
 </div>
 
 
