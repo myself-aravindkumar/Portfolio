@@ -55,7 +55,7 @@
   3. Run button to build and launch the app using .NET 8 runtime.The app will open in your browser at https://localhost:44349
   4. Edit your .razor components inside the /Pages. After making changes, save your files, then rebuild and rerun the project in Visual Studio to see the updates in the browser
 
-## How to Customize Your Portfolio
+### How to Customize Your Portfolio
 
 1. Modify pages in /Pages like Index.razor, About.razor, etc.
 2. Update layout and shared components like MainLayout.razor, HeaderComponent.razor, and FooterComponent.razor.
