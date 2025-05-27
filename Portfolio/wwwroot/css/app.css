@@ -10,6 +10,12 @@
     color: red;
 }
 
+.typewriter {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
